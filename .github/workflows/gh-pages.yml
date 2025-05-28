@@ -1,9 +1,9 @@
-name: Build and Deploy Pygame Web App
-
-on:
-  push:
-    branches:
-      - main  # Or 'master', depending on your default branch
+- name: Build for Web 🕸️
+        run: |
+          echo "Current directory contents:"
+          ls -R
+          echo "Starting build..."
+          pygbag --build_dir docs --app_name "Space Invaders" --app_version "1.0" ./main.py
 
 jobs:
   build-and-deploy:
